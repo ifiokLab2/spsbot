@@ -1,0 +1,228 @@
+
+.bot-control-wrapper{
+    padding: 20px 2px;
+    display: flex;
+    align-items: center;
+    margin: 90px 0 20px 0;
+
+}
+
+.bot-control-wrapper button:nth-child(2){
+    margin: 0 8px;
+    background-color: navy;
+    padding: 10px 20px;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+}
+#chart-main-wrapper{
+    background-color: #000;
+}
+
+.organization-form{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+   
+}
+
+.organization-form .form-wrapper .form-headerx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    
+}
+.organization-form .form-wrapper .form-headerx .title{
+    font-size: .9rem;
+    font-weight: 800;
+   text-align: center;
+}
+.organization-form .form-wrapper .form-headerx .icon{
+    font-size: .7rem;
+    font-weight: 800;
+    
+}
+
+.organization-form.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.organization-form .form-wrapper .logo-wrapper #logo-label{
+    margin-bottom: 5px !important;
+    top: unset;
+    left: unset;
+    position: unset;
+    font-size: .8rem;
+}
+.organization-form .form-wrapper .logo-wrapper input{
+    padding: 5px;
+    margin-top: 5px;
+}
+.organization-form .btn-wrapper{
+    margin-top: 30px;
+}
+
+.organization-form .btn-wrapper button{
+    background-color: #03192e;
+    color: white;
+    border: transparent;
+}
+.organization-form .btn-wrapper button:hover{
+    background-color: #2196F3;
+}
+.organization-form .icon i{
+    font-size: 1.2rem;
+}
+.organization-form .form-wrapper{
+    width: 400px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+.snackbar-success {
+    position: fixed;
+    bottom: 20px;
+    right: 2%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 15px;
+    width: 150px;
+    border-radius: 4px;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000;
+    animation: shakeFadeOff 8s forwards; /* 3s duration, forwards to keep the final state */
+  
+    /* Additional styles for the shake effect */
+    animation-iteration-count: 1;
+  }
+.snackbar-success i{
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 6px;
+}
+.snackbar-danger i{
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 6px;
+}
+  .snackbar-danger {
+    position: fixed;
+    bottom: 20px;
+    right: 2%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    display: inline-block;
+   
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000;
+    animation: shakeFadeOff 8s forwards; /* 3s duration, forwards to keep the final state */
+  
+    /* Additional styles for the shake effect */
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes shakeFadeOff {
+    0% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%);
+    }
+  
+    20%, 80% {
+      transform: translateX(-50%) translateX(10px);
+    }
+  
+    40%, 60% {
+      transform: translateX(-50%) translateX(-10px);
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateX(0);
+    }
+  }
+  @keyframes shakeFadeOffMobile {
+    0% {
+      opacity: 1;
+      visibility: visible;
+     
+    }
+  
+    20%, 80% {
+      opacity: 0.8;
+    }
+  
+    40%, 60% {
+      opacity: .6;
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+     
+    }
+  }
+
+  .App{
+    border: solid white;
+    width: 100px;
+    height: 50px;
+   
+    border-radius: 25px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .toggle-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    color: black;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0;
+  }
+  
+  .toggle-button.on {
+    background-color: white;
+    transform: translateX(50px);
+  }
+  
+  .toggle-button.off {
+    background-color: white;
+    transform: translateX(0);
+  }
+  
+
+@media screen and (max-width:992px){
+  .snackbar-danger,.snackbar-success{
+    animation: shakeFadeOffMobile 8s forwards; /* 3s duration, forwards to keep the final state */
+    /* Additional styles for the shake effect */
+    animation-iteration-count: unset;
+  }
+}
